@@ -55,13 +55,13 @@ end
 
 
 get("/payment/results") do
-  r = (params.fetch("apr").to_f / 100 )/ 12
-  n = params.fetch("years").to_f * 12
+  r = (params.fetch("user_apr").to_f / 100 )/ 12
+  n = params.fetch("user_years").to_f * 12
   d1 = (1 + r)
   d2 = (n *-1)
  
   denominator = 1 - (d1 ** d2)
-  @principal = params.fetch("principal").to_f
+  @principal = params.fetch("user_pv").to_f
   @payment = (r * @principal)/denominator
   @payment= @payment.to_fs(:currency)
 

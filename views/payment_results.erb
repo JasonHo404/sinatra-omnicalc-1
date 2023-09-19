@@ -4,14 +4,14 @@
     APR
   </dt>
   <dd>
-    <%=params.fetch("apr").to_f.to_fs(:percentage)%>
+    <%=params.fetch("user_apr").to_f.to_fs(:percentage)%>
   </dd>
 
   <dt>
     Number of years
   </dt>
   <dd>
-     <%=params.fetch("years")%>
+     <%=params.fetch("user_years")%>
   </dd>
 
   <dt>
@@ -22,7 +22,7 @@
   </dd>
 
   <dt>
-    Monthly Payment 
+    Payment 
   </dt>
   <dd>
     <%=@payment %>
