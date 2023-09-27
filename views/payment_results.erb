@@ -4,14 +4,15 @@
     APR
   </dt>
   <dd>
-    <%=params.fetch("user_apr").to_f.to_fs(:percentage)%>
+    <%#=@user_apr%>
+    <%= @apr.to_fs(:percentage, { :precision => 4 }) %>
   </dd>
 
   <dt>
     Number of years
   </dt>
   <dd>
-     <%=params.fetch("user_years")%>
+     <%= @years %>
   </dd>
 
   <dt>
@@ -25,7 +26,7 @@
     Payment 
   </dt>
   <dd>
-    <%=@payment %>
+    <%=@payment.to_fs(:currency)%>
   </dd>
 </dl>
 
